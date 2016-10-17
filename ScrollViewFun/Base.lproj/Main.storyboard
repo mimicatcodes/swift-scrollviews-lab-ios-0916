@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,12 +18,49 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MFn-kK-tIC">
+                                <subviews>
+                                    <stackView contentMode="TopLeft" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="t1C-Ox-jv3">
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Anger" translatesAutoresizingMaskIntoConstraints="NO" id="sH4-qL-tpZ"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Disgust" translatesAutoresizingMaskIntoConstraints="NO" id="oEU-cz-I8D"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fear" translatesAutoresizingMaskIntoConstraints="NO" id="cEq-Mx-ZQt"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Joy" translatesAutoresizingMaskIntoConstraints="NO" id="Y9B-Oh-Dok"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sadness" translatesAutoresizingMaskIntoConstraints="NO" id="C6y-4b-xHA"/>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="t1C-Ox-jv3" firstAttribute="height" secondItem="MFn-kK-tIC" secondAttribute="height" id="OkS-sw-oqg"/>
+                                    <constraint firstItem="t1C-Ox-jv3" firstAttribute="bottom" secondItem="MFn-kK-tIC" secondAttribute="bottom" id="TM7-av-Vvf"/>
+                                    <constraint firstAttribute="trailing" secondItem="t1C-Ox-jv3" secondAttribute="trailing" id="qa1-eb-atO"/>
+                                    <constraint firstItem="t1C-Ox-jv3" firstAttribute="leading" secondItem="MFn-kK-tIC" secondAttribute="leading" id="uwm-PU-1kh"/>
+                                    <constraint firstItem="t1C-Ox-jv3" firstAttribute="top" secondItem="MFn-kK-tIC" secondAttribute="top" id="whO-H0-pjr"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="MFn-kK-tIC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="4Ql-eF-AAY"/>
+                            <constraint firstItem="MFn-kK-tIC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="B5e-FK-14I"/>
+                            <constraint firstItem="t1C-Ox-jv3" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="5" id="Jj7-2v-2n2"/>
+                            <constraint firstItem="MFn-kK-tIC" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="cw4-IC-rVU"/>
+                            <constraint firstItem="MFn-kK-tIC" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="ytA-Bo-RuN"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="281.5" y="396.5"/>
+            <point key="canvasLocation" x="280.80000000000001" y="396.25187406296857"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Anger" width="412" height="634"/>
+        <image name="Disgust" width="414" height="630"/>
+        <image name="Fear" width="416" height="634"/>
+        <image name="Joy" width="406" height="636"/>
+        <image name="Sadness" width="406" height="636"/>
+    </resources>
 </document>
